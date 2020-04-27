@@ -6,7 +6,7 @@ class docter:
 	def __init__(self):
 		self.ses=requests.Session()
 
-	def alodoc(self,num):
+	def vivo(self,num):
 		self.ses.headers.update({'referer':'https://login.vivo.com.br/loginmarca/appmanager/marca/publico?acesso=paravoce'})
 		req1=self.ses.get('https://login.vivo.com.br/loginmarca/appmanager/marca/publico?acesso=paravoce')
 		bs1=BS(req1.text,'html.parser')
@@ -60,7 +60,7 @@ class docter:
 		else:
 			print("[-] Gagal")
 
-	def prosehat(self,num):
+	def meuvivo(self,num):
 		head={
 			'accept': 'application/json, text/javascript, */*; q=0.01',
 			'origin': 'https://login.vivo.com.br/loginmarca/appmanager/marca/publico?origem=https://login.vivo.com.br/saml2/idp/sso/login-return#',

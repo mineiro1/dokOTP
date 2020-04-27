@@ -96,7 +96,7 @@ while True:
 [ Spam List ]
 1. vivo.com
 2. Klikdokter.com
-3. meu vivo
+3. meuvivo
 	""")
 		pil=int(input("> Pilih: "))
 		print("="*25)
